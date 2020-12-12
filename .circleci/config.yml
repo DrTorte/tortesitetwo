@@ -6,6 +6,5 @@ jobs:
     steps:
       - checkout
       - run: 
-        - hugo -D
-      - run: 
-        - ls -la
+          hugo -D
+          ls -la
