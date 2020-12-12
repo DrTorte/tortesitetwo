@@ -14,14 +14,14 @@ jobs:
           root: .
           # Must be relative path from root
           paths:
-            - /
+            - .
   build:
     docker:
       - image: klakegg/hugo:busybox
     steps:
       - attach_workspace:
           # Must be absolute path or relative path from working_directory
-          at: /tmp/workspace
+          at: .
       - run: ls -la
       - run: hugo -D;
 
