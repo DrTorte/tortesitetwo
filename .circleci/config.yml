@@ -5,6 +5,7 @@ jobs:
       - image: klakegg/hugo:busybox
     steps:
       - checkout
-      - run: 
-          hugo -D;
-          ls -la
+      - run: git submodule sync;
+      - run: git submodule update --init
+      - run: hugo -D;
+      - run: ls -la
