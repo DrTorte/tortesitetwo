@@ -7,10 +7,16 @@ jobs:
       - checkout
       - run: git submodule sync;
       - run: git submodule update --init
+      - save_cache:
+           key: my-cache
+           paths:
+             - /
   build:
     docker:
       - image: klakegg/hugo:busybox
     steps:
+      - restore_cache:
+            key: my-cache
       - run: ls -la
       - run: hugo -D;
 
