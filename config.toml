@@ -1,4 +1,4 @@
-baseURL = "http://www.drtorte.net/"
+baseURL = "https://www.drtorte.net/"
 languageCode = "en-us"
 title = "DrTorte and Adventures"
 theme = "dimension"
