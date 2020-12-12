@@ -5,4 +5,7 @@ jobs:
       - image: klakegg/hugo:busybox
     steps:
       - checkout
-      - run: ls -la
+      - run: 
+        - hugo -D
+      - run: 
+        - ls -la
