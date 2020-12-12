@@ -1,11 +1,15 @@
 version: 2.1
 jobs:
+  prep:
+    docker:
+        - image: alpine/git
+    steps: 
+      - checkout
+      - run: git submodule sync;
+      - run: git submodule update --init
   build:
     docker:
       - image: klakegg/hugo:busybox
     steps:
-      - checkout
-      - run: git submodule sync;
-      - run: git submodule update --init
       - run: hugo -D;
       - run: ls -la
