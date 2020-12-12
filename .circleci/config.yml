@@ -1,9 +1,8 @@
 version: 2.1
-
 jobs:
   build:
     docker:
       - image: klakegg/hugo:busybox
-  steps:
-    - checkout
-    - run: ls -la
+    steps:
+      - checkout
+      - run: ls -la
