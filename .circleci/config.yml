@@ -13,3 +13,12 @@ jobs:
     steps:
       - run: hugo -D;
       - run: ls -la
+
+workflows:
+    version: 2
+    workflow:
+        jobs:
+            - prep
+            - build:
+                requires:
+                    - prep
