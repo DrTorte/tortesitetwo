@@ -11,8 +11,8 @@ jobs:
     docker:
       - image: klakegg/hugo:busybox
     steps:
-      - run: hugo -D;
       - run: ls -la
+      - run: hugo -D;
 
 workflows:
     version: 2
